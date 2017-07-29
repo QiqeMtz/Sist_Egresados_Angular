@@ -1,0 +1,747 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Datos del alumno a registrar</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+
+              <form name="datosalumno" id="datosalumno" novalidate>
+
+                <div class="form-group">
+                  <label for="nombre">Nombre del alumno</label>
+                  <input type="text" class="form-control" name="nombre" ng-model="alumno.nombre_completo" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="puesto">¿De qué carrera es egresado?</label>
+                  <input type="text" class="form-control" name="carrera" ng-model="alumno.carrera" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="departamento">Correo electrónico</label>
+                  <input type="text" class="form-control" name="correo" ng-model="alumno.correo_electronico" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="salario">Domicilio</label>
+                  <input type="text" class="form-control" name="domicilio" ng-model="alumno.domicilio" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="fecha">Teléfono</label>
+                  <input type="text" class="form-control" name="telefono" ng-model="alumno.telefono" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="fecha">¿Está titulado?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="radio">
+                          <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="En tramite" checked="">
+                            En tramite
+                        </label>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+
+                 <div class="form-group">
+                  <label for="fecha">¿Cuenta con cédula?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="radio">
+                          <label>
+                            <input type="radio" ng-model="alumno.titulado"  value="En tramite" checked="">
+                            En tramite
+                        </label>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="fecha">¿Al egresar o antes de egresar, el ITSPR le proprocionó algún curso para mejorar la busqueda de empleo?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.cursobe"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.cursobe"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label for="fecha">¿El ITSPR le ha proporcionado ayuda en la búsqueda de ofertas de empleo?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.busoferta"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.busoferta"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="fecha">¿Sabía qué existe un departamento vinculado en la búsqueda de empleo para el egresado? (Vinculación y Extensión)</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.existvinc"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.existvinc"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="fecha">Si ya conoce del departamento que lleva el seguimiento de egresados y bolsa de trabajo, ¿Usted le ha proporcionado sus datos para su ubicación? (Teléfono, e-mail, dirección)</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.datubic"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.datubic"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>  
+                
+                 <div class="form-group">
+                  <label for="fecha">¿Ha proporcionado su cv (en archivo electrónico) al departamento de vinculación y extensión?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.cvok"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.cvok"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>   
+                
+                <div class="form-group">
+                  <label for="fecha">¿El tecnológico le hace llegar ofertas de trabajo?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.ofertatec"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.ofertatec"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label for="fecha">Actualmente trabaja:</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.empleadoDes"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.empleadoDes"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="select" class="col-lg-2 control-label">¿Cuáles son las razones por las que no trabaja?</label>
+                  <div class="col-lg-10">
+                    <select class="form-control" id="select">
+                      <option>Continuación de estudios (maestría o posgrado)</option>
+                      <option>Porque no se ha titulado</option>
+                      <option>Falta de interés por trabajar</option>
+                      <option>No hay empleos relacionados con la tarea que estudié</option>
+                    </select>
+                  </div>
+                  <br>
+                </div>
+               <br>
+               <br>      
+                  
+                 <div class="form-group">
+                  <label for="fecha">¿Las actividades que realiza actualmente son de acuerdo a su perfil o carrera?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.actperfil"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-1">
+                        <label>
+                            <input type="radio" ng-model="alumno.actperfil"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                  </div>
+                </div> 
+                 
+                
+                <div class="form-group">
+                  <label for="select" class="col-lg-2 control-label">¿Cuál es la causa por la que actualmente no trabaja en actividades relacionadas con el perfil de su carrera?</label>
+                  <div class="col-lg-10">
+                    <select class="form-control" id="select">
+                      <option>Porque no se ha titulado</option>
+                      <option>Falta de interés por trabajar en su área</option>
+                      <option>No cubrió los requisitos de ingreso donde solicitó trabajo</option>
+                      <option>No hay empleos relacionados con la tarea que estudié</option>
+                      <option>No se sintió capaz de trabajar en su área</option>    
+                    </select>
+                  </div>
+                <br>    
+                </div>  
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">¿Cuál fue el motivo?</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Escuela de procedencia
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Falta de experiencia en el área
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        No aprobación del examen de selección 
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Aspectos personales(Edad, sexo, estado civil, etc)
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros:
+                      </label>
+                    </div>  
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">¿En qué lugar trabaja actualmente?</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Constituí mi propia empresa 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Negocio familiar 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Cooperativa
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Organismo o Institución del Sector público
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Organismo o Institución del Sector privado (fábrica, taller, empacadora, etc.) 
+                      </label>
+                    </div>
+                     <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Organismo o Institución mixta (de participación pública y privada)
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros:
+                      </label>
+                    </div>    
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">¿Cuánto tiempo tardó en conseguir empleo?</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Ya trabajaba desde antes de finalizar mis estudios 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Menos de tres meses 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        De 3 a 6 meses  
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        De 6 a 12 meses 
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Más de 1 año
+                      </label>
+                    </div>  
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">¿Qué medio le permitió conseguir empleo?</label>
+                  <div class="col-lg-10">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Anuncio en el periódico  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Recomendación de familiares o amigos  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Bolsa de trabajo del ITSPR
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros:
+                      </label>
+                    </div>  
+                  </div>
+                </div> 
+                <br>
+                
+                <p class="text-info">Seguimiento de egresados empleados</p>  
+                  
+                <div class="form-group">
+                  <label for="nombre">Nombre de la empresa</label>
+                  <input type="text" class="form-control" name="nombre" ng-model="alumno.nombre_empresa" required>
+                </div> 
+                
+                <div class="form-group">
+                  <label for="nombre">Cargo que desempeña</label>
+                  <input type="text" class="form-control" name="nombre" ng-model="alumno.nombre_cargo" required>
+                </div>
+                  
+                <div class="form-group">
+                  <label for="nombre">Dirección de la empresa</label>
+                  <input type="text" class="form-control" name="nombre" ng-model="alumno.nombre_direccion" required>
+                </div> 
+                
+                <div class="form-group">
+                  <label for="nombre">Teléfono de la empresa</label>
+                  <input type="text" class="form-control" name="nombre" ng-model="alumno.telefono_empresa" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="select" class="col-lg-3 control-label">Sector al que pertenece la empresa</label>
+                  <div class="col-lg-9">
+                    <select class="form-control" id="select">
+                      <option>Educativo</option>
+                      <option>Primario</option>
+                      <option>Secundario</option>
+                      <option>Terciario</option>
+                    </select>
+                  </div>
+                    <br>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="select" class="col-lg-3 control-label">Nivel jerárquico ocupado en la empresa</label>
+                  <div class="col-lg-9">
+                    <select class="form-control" id="select">
+                      <option>Mando superior (directivo,propietario,gerente,subgerente)</option>
+                      <option>Mando intermedio (jefe de departamento o equivalente) </option>
+                      <option>Supervisor o equivalente</option>
+                      <option>Técnico o auxiliar</option>
+                    </select>
+                  </div>
+                    <br>
+                </div>
+                  <br>
+                                   
+                <div class="form-group">
+                  <label for="select" class="col-lg-3 control-label">Actividades que desarrolla en su centro de trabajo</label>
+                    <div class="col-lg-9" selectContainer>
+                    <select class="form-control" multiple title="Escoge al menos una actividad" >
+                      <option>Control de calidad</option>
+                      <option>Administración de recursos humanos</option>
+                      <option>Supervisión del trabajo</option>
+                      <option>Programación y procesamiento de información</option> 
+                      <option>Mantenimiento preventivo y correctivo</option>
+                      <option>Administración financiera</option>
+                      <option>Coordinación de actividades</option>
+                      <option>Consumo de insumos y venta de productos</option>
+                      <option>Manejo de recursos humanos</option>
+                      <option>Mercadotecnia</option>
+                      <option>Organización y distribución de trabajo</option> 
+                      <option>Investigación y desarrollo tecnológico </option>  
+                      <option>Selección y evaluación de insumos </option>  
+                      <option>Planeación y operación de procesos de producción </option>
+                      <option>Elaboración y/o desarrollo de proyectos</option>     
+                    </select>
+                  </div>
+                 <br> 
+                </div>
+                <br>
+                                                      
+                                            
+                 <div class="form-group">
+                  <label class="col-lg-3 control-label">Ciudad, estado o país donde trabaja actualmente:</label>
+                  <div class="col-lg-9">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Poza Rica,Ver.  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Dentro del Estado de Veracruz 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        En algun lugar de la República Mexicana,especifique:
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        En el extrajero, especifique:
+                      </label>
+                    </div>  
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label for="fecha">¿Considera usted que la formación académica adquirida en el ITSPR, le ha permitido realizar eficientemente las actividades que ha desempeñado en su ámbito laboral?</label>
+                  <div class="row">
+                      <div class="col-lg-1">
+                      <div class="radio"> 
+                        <label>
+                            <input type="radio" ng-model="alumno.cedula"  value="Si" checked="">
+                            Si
+                        </label>
+                      </div>
+                      </div>
+                      <div class="radio col-lg-2">
+                        <label>
+                            <input type="radio" ng-model="alumno.cedula"  value="Parcialmente" checked="">
+                            Parcialmente 
+                        </label>
+                      </div>
+                      <div class="col-lg-3">
+                      <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="alumno.cedula"  value="No" checked="">
+                            No
+                        </label>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+                  
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">¿En qué aspectos considera usted deficiente su preparación académica y que le son necesarios para desempeñar en el aspecto laboral?</label>
+                  <div class="col-lg-9">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Expresión oral y escrita  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Dominio de algún idioma extranjero 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Aplicación de principios, técnicas y métodos para la solución de problemas
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Aspectos contables, financieros y fiscales
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros, especifique: 
+                      </label>
+                    </div> 
+                  </div>
+                </div>  
+                
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">¿Qué ha hecho para superar las carencias señaladas?  </label>
+                  <div class="col-lg-9">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Nada  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Recurrir a profesores del ITSPR  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Solicitar asesoría a personas con experiencia
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Consultar bibliografía sobre el tema
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Tomar cursos 
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros, especifique: 
+                      </label>
+                    </div> 
+                  </div>
+                </div>
+                  
+                  <div class="form-group">
+                  <label class="col-lg-3 control-label">¿Cuál (es) es (son) su (s) razón (es) por la(s) que no recurrió a los profesores del ITSPR? </label>
+                  <div class="col-lg-9">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                        Por falta de confianza   
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Por falta de actualización de los profesores  
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Por falta de respuestas prácticas 
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                        Por el tiempo y la distancia 
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Por falta de actualización del centro de información 
+                      </label>
+                    </div> 
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios5" value="option5">
+                        Otros, especifique: 
+                      </label>
+                    </div> 
+                  </div>
+                </div> 
+
+
+                <input type="submit" ng-click="registraAlumno()" id="btnSave" value="Registrar Alumno"  ng-disabled="datosalumno.$invalid" class="btn btn-md btn-success">
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Empleados Registrados</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Nombre Empleado</th>
+                      <th>Puesto</th>
+                      <th>Departamento</th>
+                      <th>Salario</th>
+                      <th>Fecha De Ingreso</th>
+                      <th>Accion 1</th>
+                      <th>Accion 2</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="empleado in empleadosdata">
+                      <td>{{ empleado.nombre }}</td>
+                      <td>{{ empleado.puesto }}</td>
+                      <td>{{ empleado.departamento }}</td>
+                      <td>{{ empleado.sueldo }}</td>
+                      <td>{{ empleado.fecha }}</td>
+                      <td><a href="#/edit/{{empleado.$id}}" class="btn btn-small btn-primary">Editar</a></td>
+                      <td><a ng-click="eliminaEmpleado(empleado.$id)" class="btn btn-small btn-danger">Eliminar</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
